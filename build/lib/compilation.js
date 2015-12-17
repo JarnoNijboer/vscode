@@ -67,8 +67,7 @@ function compileTask(out, build) {
             .pipe(compile())
             .pipe(dtsFilter)
             .pipe(gulp.dest(out))
-            .pipe(dtsFilter.restore)
-            ;
+            .pipe(dtsFilter.restore);
     };
 }
 exports.compileTask = compileTask;
@@ -83,8 +82,7 @@ function watchTask(out, build) {
             .pipe(util.incremental(compile, src, true))
             .pipe(dtsFilter)
             .pipe(gulp.dest(out))
-            .pipe(dtsFilter.restore)
-            ;
+            .pipe(dtsFilter.restore);
     };
 }
 exports.watchTask = watchTask;

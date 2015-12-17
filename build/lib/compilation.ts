@@ -85,7 +85,7 @@ export function compileTask(out: string, build: boolean): () => NodeJS.ReadWrite
 			.pipe(dtsFilter)
 			.pipe(gulp.dest(out))
 			.pipe(dtsFilter.restore)
-			.pipe(monacodtsTask(out, false));
+			;
 	};
 }
 
@@ -108,7 +108,7 @@ export function watchTask(out: string, build: boolean): () => NodeJS.ReadWriteSt
 			.pipe(dtsFilter)
 			.pipe(gulp.dest(out))
 			.pipe(dtsFilter.restore)
-			.pipe(monacodtsTask(out, true));
+			;
 	};
 }
 
