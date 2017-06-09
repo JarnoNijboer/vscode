@@ -68,7 +68,7 @@ function compileTask(out, build) {
             .pipe(dtsFilter)
             .pipe(gulp.dest(out))
             .pipe(dtsFilter.restore)
-            .pipe(monacodtsTask(out, false));
+            ;
     };
 }
 exports.compileTask = compileTask;
@@ -84,7 +84,7 @@ function watchTask(out, build) {
             .pipe(dtsFilter)
             .pipe(gulp.dest(out))
             .pipe(dtsFilter.restore)
-            .pipe(monacodtsTask(out, true));
+            ;
     };
 }
 exports.watchTask = watchTask;
